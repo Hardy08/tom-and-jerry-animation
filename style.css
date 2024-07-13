@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #f09, #36f);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tom {
+    left: -200px;
+    animation: moveTom 5s linear infinite;
+    height: 100px;
+}
+
+.jerry {
+    right: -200px;
+    animation: moveJerry 5s linear infinite;
+}
+
+@keyframes moveTom {
+    0% { left: -200px; }
+    50% { left: calc(100% + 50px); }
+    100% { left: -200px; }
+}
+
+@keyframes moveJerry {
+    0% { right: -200px; }
+    50% { right: calc(100% + 50px); }
+    100% { right: -200px; }
+}
